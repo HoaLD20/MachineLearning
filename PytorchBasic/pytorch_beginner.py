@@ -1,5 +1,5 @@
 import torch
-
+import numpy
 x = torch.empty(5, 3)
 y = torch.rand(5, 3)
 z = torch.zeros(5, 3, dtype=torch.long)
@@ -40,6 +40,36 @@ tu tinh so h ang so cot va tinh tu dong
 """
 lay gia tri tu tensor
 """
-print(y)
+# print(y)
 # l = y[0, 0]
 # print(l.item())
+"""
+lay gia tri su dung numpy
+"""
+
+# meow = y.numpy()
+# print(y.numpy())
+# print(meow[0, 0])
+"""
+chuyen nguoc lai tu numpy sang tensor
+"""
+# num = numpy.ones(3)
+# print(num)
+# meow = torch.from_numpy(num)
+# print(meow)
+"""
+CPU
+"""
+# device = torch.cuda.is_available()
+# print(device)
+# if not torch.cuda.is_available():
+#     device = torch.device("cuda")
+#     meow = torch.ones_like(y, device=device)
+#     gau = y.to(device)
+#     meow += gau
+#     print(meow)
+
+"""
+chuyen ve tinh toan sang CPU
+"""
+# y.cpu()
