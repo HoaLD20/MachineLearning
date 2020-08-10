@@ -13,6 +13,7 @@ print(x)
 # d(y)/d(x) = e^x = e^2 = 7.3891
 y = torch.exp(x)
 print(y)
+print(y.grad_fn)
 # tensor(2., requires_grad=True)
 # tensor(7.3891, grad_fn=<ExpBackward>)
 y.backward()
