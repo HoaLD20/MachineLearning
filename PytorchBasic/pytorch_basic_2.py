@@ -3,7 +3,7 @@ import torch
 """
 torch.Tensor
 .requires_grad: check enable chức năng lưu trữ thông tin dạng radian 
-.grad: thông tin kết quả khi đạo hàm xuống 
+.grad: kết quả khi đạo hàm xuống 
 .grad_fn: kết quả hàm số - lưu thông tin đã sử dùng hs gì
 .backward(): đạo hàm các hàm số đã dùng trong tensor đó
 """
