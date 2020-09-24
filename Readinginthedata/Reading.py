@@ -27,3 +27,13 @@ f1 = numpy.poly1d(fp1)
 fx = numpy.linspace(0, x[-1], 1000)  # generate X-values for plotting
 plt.plot(fx, f1(fx), linewidth=4)
 plt.legend(["d=%i" % f1.order], loc="upper left")
+inflection = 3.5 * 7 * 24  # calculate the inflection point in hours
+xa = x[:inflection]  # data before the inflection point
+ya = y[:inflection]
+xb = x[inflection:]  # data after
+yb = y[inflection:]
+fa = sp.poly1d(sp.polyfit(xa, ya, 1))
+fb = sp.poly1d(sp.polyfit(xb, yb, 1))
+fa_error = error(fa, xa, ya)
+fb_error = error(fb, xb, yb)
+print("Error inflection=%f" % (fa + fb_error))
