@@ -3,7 +3,7 @@ import numpy as np
 
 face_cas = cv.CascadeClassifier(cv.data.haarcascades + "haarcascade_frontalface_default.xml")
 cap = cv.VideoCapture(0)
-while (True):
+while 1:
     ret, frame = cap.read()
     gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
     faces = face_cas.detectMultiScale(gray)
