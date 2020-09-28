@@ -13,3 +13,5 @@ testset = torchvision.datasets.CIFAR10(root='./Document', train=False, download=
 testloader = torch.utils.data.DataLoader(testset, batch_size=4, shuffle=False, num_workers=2)
 
 classes = ('plane', 'car', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck')
+
+print("test")
